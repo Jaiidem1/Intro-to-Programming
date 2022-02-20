@@ -1,0 +1,14 @@
+directory = input('What directory would you like to save your file in? ')
+file_name = input('What is the name of the file? ')
+name = input('What is your name? ')
+address = input('What is your address? ')
+phone_number = input('What is your phone number? ')
+
+filename = (f'{file_name}.txt')
+
+with open(filename, 'w') as file_object:
+    file_object.write(f"{directory}, {file_name}, {name}, {address}, {phone_number}")
+
+with open(filename) as file_object:
+    content = file_object.read()
+    print(content)
